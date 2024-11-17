@@ -24,6 +24,11 @@ contactEmail.verify((error) => {
   }
 });
 
+// Root route
+app.get("/", (req, res) => {
+  res.send("Welcome to the Contact Form API!");
+});
+
 // Contact route
 app.post("/api/contact", async (req, res) => {
   const { firstName, lastName, email, phone, message } = req.body;
